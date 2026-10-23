@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+/* Theme colours come from the active product (set on <html> by the Hero). */
+:root {
+  --base: #8a5a2b;
+  --ink: #fff6e8;
+  --accent: #e9c99b;
+}
+
+@theme inline {
+  --font-sans: var(--font-body), var(--font-gu-body), system-ui, sans-serif;
+  --font-display: var(--font-anton), var(--font-gu-display), Impact, sans-serif;
+  --font-gujarati: var(--font-gu-display), var(--font-gu-body), sans-serif;
+}
+
+html {
+  background: var(--base);
+  color: var(--ink);
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: var(--font-sans);
+  overflow-x: clip;
+}
+
+/* Lenis */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* Floating ingredient scale per breakpoint */
+.stage {
+  --fs: 0.5;
+}
+@media (min-width: 640px) {
+  .stage {
+    --fs: 0.72;
+  }
+}
+@media (min-width: 1024px) {
+  .stage {
+    --fs: 1;
+  }
+}
+
+/* Static film grain for a print-like, premium feel (no animation) */
+.grain {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");
+  /* no blend mode: blending the whole screen every frame was a major scroll cost */
+  opacity: 0.07;
+}
+
+/* Gentle floating loop for hero images. CSS (compositor thread) instead of JS, so it never competes with scrolling */
+@keyframes bob {
+  50% {
+    transform: translate3d(0, -12px, 0);
+  }
+}
+.bob {
+  animation: bob 4.5s ease-in-out infinite;
+  will-change: transform;
+}
+@media (prefers-reduced-motion: reduce) {
+  .bob {
+    animation: none;
+  }
+}
+
+.sr-only-focusable:not(:focus) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Content sections below the hero share one deep cocoa ground */
+:root {
+  --cocoa: #21140c;
+  --cream: #f6ebdd;
+  --muted: #c9b59c;
+  /* not-yet-revealed story words: 4.8:1 on cocoa */
+  --dim: #93816d;
+}
+
+@keyframes marquee {
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+.marquee-track {
+  animation: marquee 38s linear infinite;
+}
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}
+
+/* Gift box section: light ground so the maroon box stands out */
+:root {
+  --paper: #f3e6d3;
+  --paper-ink: #21140c;
+  --paper-muted: #5c4a3a;
+  --maroon: #7a1f1f;
+}
+
+.footer-wordmark::before {
+  content: attr(data-word);
+}

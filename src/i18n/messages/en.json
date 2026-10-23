@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "skip": "Skip to content"
+  },
+  "nav": {
+    "sweets": "Sweets",
+    "story": "Our story",
+    "process": "How it's made",
+    "gift": "Gift box",
+    "label": "Main"
+  },
+  "lang": {
+    "label": "Language",
+    "en": "English",
+    "gu": "Gujarati"
+  },
+  "cart": {
+    "label": "Cart",
+    "items": "{count} items in cart",
+    "added": "{name} added to cart"
+  },
+  "hero": {
+    "heading": "VARAKH — handcrafted Indian sweets",
+    "brand": "VARAKH",
+    "kicker": "Handmade in small batches",
+    "add": "Add to cart",
+    "addedShort": "Added",
+    "per": "per",
+    "prev": "Previous sweet",
+    "next": "Next sweet",
+    "choose": "Choose a sweet",
+    "show": "Show {name}",
+    "pause": "Pause slideshow",
+    "play": "Play slideshow"
+  },
+  "story": {
+    "eyebrow": "Our story",
+    "title": "Slow sweets, made by hand",
+    "body": "Varakh began with one rule from our grandmother's kitchen in Gujarat: never rush a sweet. We still roast every cashew, reduce every litre of milk and lay every sheet of silver by hand, in batches small enough to taste each one.",
+    "caption": "Inside the VARAKH kitchen",
+    "facts": {
+      "fresh": "Made fresh every morning",
+      "natural": "No preservatives",
+      "silver": "Pure silver varakh"
+    },
+    "stripLabel": "What goes into our sweets"
+  },
+  "process": {
+    "eyebrow": "How it's made",
+    "title": "From nut to box in one day",
+    "intro": "This is how one batch of kaju katli is made, step by step.",
+    "step": "Step",
+    "time": "Time"
+  },
+  "gift": {
+    "eyebrow": "Gift box",
+    "title": "Four favourites, one box",
+    "body": "One of each sweet, packed by hand in our maroon keepsake box with a gold ribbon. Made for Diwali, weddings and every visit home.",
+    "contents": "Inside the box",
+    "price": "Gift box price",
+    "save": "You save {amount}",
+    "wrap": "Free gift message",
+    "add": "Add gift box",
+    "added": "Gift box added to cart",
+    "hint": "Scroll to open the box",
+    "lidAlt": "Closed maroon gift box with a gold ribbon",
+    "boxAlt": "Open maroon gift box with four compartments"
+  },
+  "reviews": {
+    "eyebrow": "Kind words",
+    "title": "Loved at home and abroad",
+    "note": "Sample reviews written for this demo.",
+    "rating": "Rated {n} out of 5"
+  },
+  "footer": {
+    "tagline": "Handmade Indian sweets, packed the same day.",
+    "newsTitle": "Get festival offers first",
+    "emailLabel": "Email address",
+    "subscribe": "Subscribe",
+    "thanks": "Thanks! You're on the list.",
+    "invalid": "Please enter a valid email, like name@example.com.",
+    "shop": "Shop",
+    "explore": "Explore",
+    "contact": "Contact",
+    "city": "Ahmedabad, Gujarat",
+    "hours": "Mon–Sat, 9 am – 7 pm IST",
+    "rights": "© 2026 VARAKH. All rights reserved.",
+    "credit": "Design and development by Hardik Ajmeriya",
+    "top": "Back to top"
+  }
+}
